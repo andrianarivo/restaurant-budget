@@ -2,9 +2,18 @@
 
 <%= render @restaurant %>
 
+<hr/>
+
+<h4>Expenses:</h4>
+
+<% @expenses.each do |expense| %>
+  <%= render expense %>
+<% end %>
+
 <div>
   <%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant) %> |
   <%= link_to "Back to restaurants", restaurants_path %>
 
   <%= button_to "Destroy this restaurant", @restaurant, method: :delete %>
+  <%= link_to "Add a new expense", new_expense_path %>
 </div>

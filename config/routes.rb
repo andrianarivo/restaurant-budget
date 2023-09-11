@@ -5,4 +5,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "restaurants#index"
+
+  get '/expenses/new/:id',  to: 'expenses#new', as: 'add_expense'
+  post '/expenses/:id',  to: 'expenses#create', as: 'create_expense'
 end

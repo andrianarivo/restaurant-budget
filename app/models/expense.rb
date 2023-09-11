@@ -6,4 +6,12 @@ class Expense < ApplicationRecord
   validates :name, presence: true
   validates :amount, presence: true
   validates :amount, numericality: true
+
+  after_save :update_total_expense
+
+  private
+
+  def update_total_expense
+    restaurants.each(&:save)
+  end
 end
