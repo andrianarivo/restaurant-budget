@@ -7,9 +7,18 @@ class Expense < ApplicationRecord
   validates :amount, presence: true
   validates :amount, numericality: true
 
+  validate :restaurants_is_not_empty
+
   after_save :update_total_expense
 
   private
+
+  def restaurants_is_not_empty
+    return unless restaurants.is_a?(Array) && (restaurants.empty? || restaurants.all?(&:empty?))
+    return unless restaurants.is_a?(Restaurant) && restaurants.valid?
+
+    errors.add(:restaurants, 'should not be empty')
+  end
 
   def update_total_expense
     restaurants.each(&:save)

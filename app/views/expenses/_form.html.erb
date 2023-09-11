@@ -27,6 +27,11 @@
   </div>
 
   <div>
+    <%= form.label :restaurant_ids, 'Restaurants', style: "display: block" %>
+    <%= form.collection_select :restaurant_ids, @restaurants, :id, :name, { }, { multiple: true } %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>

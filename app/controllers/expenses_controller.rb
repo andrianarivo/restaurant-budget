@@ -1,5 +1,6 @@
 class ExpensesController < ApplicationController
   before_action :set_expense, only: %i[ show edit update destroy ]
+  before_action :set_restaurant, only: %i[ new create ]
 
   # GET /expenses or /expenses.json
   def index
@@ -25,7 +26,7 @@ class ExpensesController < ApplicationController
 
     respond_to do |format|
       if @expense.save
-        format.html { redirect_to expense_url(@expense), notice: "Expense was successfully created." }
+        format.html { redirect_to restaurant_path(@expense.restaurants.first), notice: "Expense was successfully created." }
         format.json { render :show, status: :created, location: @expense }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -63,8 +64,13 @@ class ExpensesController < ApplicationController
       @expense = Expense.find(params[:id])
     end
 
+  def set_restaurant
+    @restaurants = Restaurant.order(:created_at)
+  end
+
     # Only allow a list of trusted parameters through.
     def expense_params
-      params.require(:expense).permit(:name, :author_id, :amount)
+      params.require(:expense).permit(:name, :author_id, :amount, { restaurant_ids: [] } )
     end
+
 end
