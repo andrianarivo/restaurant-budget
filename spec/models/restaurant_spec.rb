@@ -4,7 +4,7 @@ RSpec.describe Restaurant, type: :model do
   subject do
     user = User.first
     user ||= User.create(name: 'David')
-    Restaurant.new(name: 'McDonald', icon: 'wallet2', user:)
+    Restaurant.new(name: 'McDonald', user:)
   end
 
   before { subject.save }
