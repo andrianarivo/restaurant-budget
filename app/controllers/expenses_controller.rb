@@ -4,7 +4,7 @@ class ExpensesController < ApplicationController
 
   # GET /expenses or /expenses.json
   def index
-    @expenses = Expense.all
+    @expenses = current_user.expenses
   end
 
   # GET /expenses/1 or /expenses/1.json
@@ -23,6 +23,7 @@ class ExpensesController < ApplicationController
   # POST /expenses or /expenses.json
   def create
     @expense = Expense.new(expense_params)
+    @expense.author = current_user
 
     respond_to do |format|
       if @expense.save
@@ -70,7 +71,7 @@ class ExpensesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def expense_params
-      params.require(:expense).permit(:name, :author_id, :amount, { restaurant_ids: [] } )
+      params.require(:expense).permit(:name, :amount, { restaurant_ids: [] } )
     end
 
 end
