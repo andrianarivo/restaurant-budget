@@ -1,6 +1,6 @@
 FactoryBot.define do
 
-  factory :user do
+  factory :user, aliases: [ :author ] do
     name { "david" }
     email { Faker::Internet.unique.email }
     password { "password"}
@@ -12,6 +12,20 @@ FactoryBot.define do
     name { Faker::Name.unique.name }
     icon { "culloch" }
     user
+  end
+
+  factory :expense do
+    name { Faker::Name.first_name }
+    amount { 10.05 }
+    author
+
+    trait :with_restaurant do
+      after(:create) do |expense|
+        expense.restaurants << create(:restaurant)
+      end
+    end
+
+    factory :expense_with_restaurant, traits: [:with_restaurant]
   end
 
 end
