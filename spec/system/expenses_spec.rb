@@ -14,9 +14,9 @@ RSpec.describe "Expenses", type: :system do
     visit restaurant_path(@expense.restaurants.first)
 
     click_link 'Add a new expense'
-    fill_in 'Name', with: Faker::Food.dish
-    fill_in 'Amount', with: 12.05
-    select(@expense.restaurants.first.name, from: 'Restaurants')
+    fill_in 'expense[name]', with: Faker::Food.dish
+    fill_in 'expense[amount]', with: 12.05
+    select(@expense.restaurants.first.name, from: 'expense[restaurant_ids]')
     click_button 'Create Expense'
 
     expect(page).to have_content("Expense was successfully created.")

@@ -1,0 +1,15 @@
+.form-control {
+  border: none;
+  min-height: 1.5rem;
+  font-family: 'Proxima Nova', serif;
+  font-size: 1rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.form-file {
+  font-family: 'Proxima Nova', serif;
+  font-size: 0.9rem;
+}
