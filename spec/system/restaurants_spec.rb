@@ -15,7 +15,7 @@ RSpec.describe "Restaurants", type: :system do
 
     click_link 'New restaurant'
     fill_in 'Name', with: Faker::Restaurant.name
-    fill_in 'Icon', with: Faker::FunnyName.two_word_name
+    attach_file 'Icon', Rails.root + 'spec/fixtures/McDonalds-Logo.png'
     click_button 'Create Restaurant'
 
     expect(page).to have_content('Restaurant was successfully created.')

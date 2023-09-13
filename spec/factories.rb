@@ -10,8 +10,14 @@ FactoryBot.define do
 
   factory :restaurant do
     name { Faker::Restaurant.unique.name }
-    icon { "culloch" }
     user
+    after(:build) do |restaurant|
+      restaurant.icon.attach(
+        io: File.open(Rails.root.join('spec', 'fixtures', 'McDonalds-Logo.png')),
+        filename: 'McDonalds-Logo.png',
+        content_type: 'image/png'
+      )
+    end
   end
 
   factory :expense do
