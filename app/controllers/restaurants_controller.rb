@@ -5,6 +5,7 @@ class RestaurantsController < ApplicationController
   # GET /restaurants or /restaurants.json
   def index
     @restaurants = current_user.restaurants
+    @global_expense = @restaurants.reduce(0) { |acc, el| acc + el.total_expense }
   end
 
   # GET /restaurants/1 or /restaurants/1.json

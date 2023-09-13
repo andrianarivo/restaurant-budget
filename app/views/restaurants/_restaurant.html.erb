@@ -1,22 +1,24 @@
-<div id="<%= dom_id restaurant %>">
-  <p>
-    <strong>Name:</strong>
-    <%= restaurant.name %>
-  </p>
+<div id="<%= dom_id restaurant %>" class="card mx-2 mb-2 d-flex gap-1">
 
-  <p>
-    <strong>Total Expense:</strong>
-    $<%= restaurant.total_expense || 0.0 %>
-  </p>
+  <%= image_tag url_for(restaurant.icon), width: 70, height: 70 %>
 
-  <p>
-    <strong>Icon:</strong>
-    <%= restaurant.icon %>
-  </p>
+  <div class="d-flex flex-column w-100 gap-1">
+    <div class="h-100 d-flex justify-content-between align-items-center">
+      <p class="text-bold text-gray-lighter">
+        <%= restaurant.name %>
+      </p>
 
-  <p>
-    <strong>User:</strong>
-    <%= restaurant.user_id %>
-  </p>
+      <p class="text-bold">
+        $<%= restaurant.total_expense || 0.0 %>
+      </p>
+    </div>
+
+    <hr class="separator"/>
+
+    <p class="text-caption text-gray-lighter">
+      <%= restaurant.updated_at.strftime("%d %b %Y") %>
+    </p>
+  </div>
+
 
 </div>

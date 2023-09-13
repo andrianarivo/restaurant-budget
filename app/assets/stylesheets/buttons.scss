@@ -1,0 +1,14 @@
+@import 'variables';
+
+.green-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 3rem;
+  background: $secondary;
+  border: 1px solid $white;
+  border-radius: 5px;
+  color: $white;
+  text-transform: uppercase;
+  text-decoration: none;
+}

@@ -1,0 +1,13 @@
+@import 'variables';
+
+.card {
+  background-color: $white;
+  box-shadow: 1px 1px 5px $shadow_color;
+  padding: 1rem;
+
+  .separator {
+    border: none;
+    background-color: $text-gray_lighter;
+    height: 1px;
+  }
+}

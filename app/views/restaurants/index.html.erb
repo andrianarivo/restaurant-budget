@@ -1,12 +1,22 @@
-<h1>Restaurants</h1>
+<nav class="nav d-flex justify-content-center align-items-center">
+  <h1>Restaurants</h1>
+</nav>
 
-<div id="restaurants">
+<div class="card shadow-bottom d-flex justify-content-between">
+  <p class="text-gray-lighter">Total Expense</p>
+  <p><b>$<%= @global_expense %></b></p>
+</div>
+
+<div id="restaurants" class="mt-5 mb-green-button">
   <% @restaurants.each do |restaurant| %>
-    <%= render restaurant %>
-    <p>
-      <%= link_to "Show this restaurant", restaurant %>
-    </p>
+
+    <a href="<%= restaurant_path(restaurant) %>" class="text-decoration-none">
+      <%= render restaurant %>
+    </a>
+
   <% end %>
 </div>
 
-<%= link_to "New restaurant", new_restaurant_path %>
+<div class="bg-secondary fixed-bottom-center w-100">
+  <%= link_to "New restaurant", new_restaurant_path, class: "green-button m-1" %>
+</div>
