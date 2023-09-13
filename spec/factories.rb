@@ -9,13 +9,13 @@ FactoryBot.define do
   end
 
   factory :restaurant do
-    name { Faker::Name.unique.name }
+    name { Faker::Restaurant.unique.name }
     icon { "culloch" }
     user
   end
 
   factory :expense do
-    name { Faker::Name.first_name }
+    name { Faker::Food.dish }
     amount { 10.05 }
     author
 

@@ -9,4 +9,15 @@ RSpec.describe "Restaurants", type: :system do
     visit restaurants_path
     expect(page).to have_content(@restaurant.name)
   end
+
+  it 'I can add new restaurant' do
+    visit restaurants_path
+
+    click_link 'New restaurant'
+    fill_in 'Name', with: Faker::Restaurant.name
+    fill_in 'Icon', with: Faker::FunnyName.two_word_name
+    click_button 'Create Restaurant'
+
+    expect(page).to have_content('Restaurant was successfully created.')
+  end
 end
