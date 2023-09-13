@@ -1,18 +1,31 @@
+<%= render 'shared/nav', title: "Details", back: true %>
 
-<%= render @restaurant %>
+<div class="card d-flex flex-column gap-1 m-1">
+  <div class="d-flex gap-1 align-items-center">
+    <%= image_tag url_for(@restaurant.icon), width: 50, height: 50 %>
+    <div class="d-flex justify-content-between align-items-center w-100">
+      <h3><%= @restaurant.name %></h3>
+      <%= button_to raw(image_tag image_url('trash')), @restaurant, method: :delete, class: 'btn-danger' %>
+    </div>
+  </div>
 
-<hr/>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-<h4>Expenses:</h4>
+  <div class="d-flex justify-content-between align-items-center">
+    <%= link_to 'Add a new expense', new_expense_path %>
+    <%= link_to raw(image_tag image_url('pencil')), edit_restaurant_path(@restaurant) %>
+  </div>
 
-<% @expenses.each do |expense| %>
-  <%= render expense %>
-<% end %>
+  <hr class="separator"/>
 
-<div>
-  <%= link_to "Edit this restaurant", edit_restaurant_path(@restaurant) %> |
-  <%= link_to "Back to restaurants", restaurants_path %>
+  <% @expenses.each do |expense| %>
+    <%= render expense %>
+  <% end %>
 
-  <%= button_to "Destroy this restaurant", @restaurant, method: :delete %>
-  <%= link_to "Add a new expense", new_expense_path %>
+  <div class="d-flex justify-content-between">
+    <p class="text-uppercase">Total payment</p>
+    <p class="text-bold">$<%= @restaurant.total_expense %></p>
+  </div>
+
 </div>

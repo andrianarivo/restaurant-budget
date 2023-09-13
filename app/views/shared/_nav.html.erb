@@ -1,0 +1,6 @@
+<nav class="nav d-flex justify-content-center align-items-center">
+  <%= if back
+     link_to raw(image_tag image_url('back_arrow')), restaurants_path, class: 'ml-1'
+  end %>
+  <h1 class="text-uppercase w-100 text-center <%= back ? "mr-5" : "" %>"><%= title %></h1>
+</nav>

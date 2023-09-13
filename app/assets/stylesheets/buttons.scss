@@ -1,5 +1,14 @@
 @import 'variables';
 
+.btn {
+  border-radius: 5px;
+  color: $white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.3rem;
+  border: none;
+}
+
 .green-button {
   display: flex;
   justify-content: center;
@@ -11,4 +20,29 @@
   color: $white;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.btn-danger {
+  @extend .btn;
+  background: $text_color;
+}
+
+.btn-primary {
+  @extend .btn;
+  background: $primary;
+}
+
+.btn-primary-outline {
+  @extend .btn-primary;
+  border: 1px solid $white;
+}
+
+.btn-secondary {
+  @extend .btn;
+  background: $secondary;
+}
+
+.btn-secondary-outline {
+  @extend .btn-secondary;
+  border: 1px solid $white;
 }
