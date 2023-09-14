@@ -132,6 +132,14 @@
   text-align: center;
 }
 
+.text-italic {
+  font-style: italic;
+}
+
+.text-stylish {
+  font-family: 'Lobster', 'serif';
+}
+
 .bg-primary {
   background: $primary;
 }
@@ -140,11 +148,8 @@
   background: $secondary;
 }
 
-.absolute-bottom-center {
+.absolute {
   position: absolute;
-  bottom: 0;
-  right: auto;
-  left: auto;
 }
 
 .fixed-bottom-center {
@@ -156,4 +161,12 @@
 
 .list-group {
   list-style: none;
+}
+
+.h-100h {
+  height: 100vh;
+}
+
+.w-100w {
+  width: 100vw;
 }

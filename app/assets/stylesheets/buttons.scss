@@ -7,6 +7,7 @@
   text-decoration: none;
   padding: 0.3rem;
   border: none;
+  text-align: center;
 }
 
 .green-button {
@@ -45,4 +46,10 @@
 .btn-secondary-outline {
   @extend .btn-secondary;
   border: 1px solid $white;
+}
+
+.btn-gray {
+  @extend .btn;
+  background: $background;
+  color: $text_gray;
 }
