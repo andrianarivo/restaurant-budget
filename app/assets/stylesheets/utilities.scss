@@ -66,6 +66,10 @@
   margin-left: 0.5rem;
 }
 
+.ml-3 {
+  margin-left: 1.5rem;
+}
+
 .mr-1 {
   margin-right: 0.5rem;
 }
@@ -78,6 +82,11 @@
   margin-right: 2.5rem;
 }
 
+.my-2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .text-bold {
   font-weight: bold;
 }
@@ -88,6 +97,10 @@
 
 .w-100 {
   width: 100%;
+}
+
+.text-white {
+  color: $white;
 }
 
 .text-gray {
@@ -141,6 +154,6 @@
   left: auto;
 }
 
-.unstyled-list {
+.list-group {
   list-style: none;
 }
