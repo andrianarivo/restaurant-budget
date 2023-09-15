@@ -4,7 +4,12 @@
 
 <br>
 
-<div>
-  <%= link_to "Show this restaurant", @restaurant %> |
-  <%= link_to "Back to restaurants", restaurants_path %>
+<div class="d-flex justify-content-center align-items-center flex-column">
+  <div class="mb-2">
+    <%= link_to "Show this restaurant", @restaurant %> |
+    <%= link_to "Back to restaurants", restaurants_path %>
+  </div>
+  <div>
+    <%= button_to raw("Delete this restaurant #{image_tag image_url('trash.svg')}"), @restaurant, method: :delete, class: 'btn-danger d-flex align-items-center gap-1 p-1' %>
+  </div>
 </div>

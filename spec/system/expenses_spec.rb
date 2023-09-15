@@ -1,7 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Expenses", type: :system do
-
+RSpec.describe 'Expenses', type: :system do
   before(:all) { @expense = FactoryBot.create(:expense_with_restaurant) }
   before(:each) { sign_in @expense.author }
 
@@ -16,9 +15,9 @@ RSpec.describe "Expenses", type: :system do
     click_link 'Add a new expense'
     fill_in 'expense[name]', with: Faker::Food.dish
     fill_in 'expense[amount]', with: 12.05
-    select(@expense.restaurants.first.name, from: 'expense[restaurant_ids]')
+    select(@expense.restaurants.first.name, from: 'expense[restaurant_ids][]')
     click_button 'Create Expense'
 
-    expect(page).to have_content("Expense was successfully created.")
+    expect(page).to have_content('Expense was successfully created.')
   end
 end
