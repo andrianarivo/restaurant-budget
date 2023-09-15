@@ -10,7 +10,7 @@ class RestaurantsController < ApplicationController
 
   # GET /restaurants/1 or /restaurants/1.json
   def show
-    @expenses = @restaurant.expenses.order(:created_at)
+    @expenses = @restaurant.expenses.order(created_at: :desc)
   end
 
   # GET /restaurants/new
