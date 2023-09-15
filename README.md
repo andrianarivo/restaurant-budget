@@ -70,8 +70,8 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://google.com)
-- [Video presentation](https://google.com)
+- [Live Demo Link](https://restaurant-budget-testing.onrender.com)
+- [Video presentation](https://www.loom.com/share/Restaurant-Budgetary-c5e5552fb1c442dcaf111998dc1bdff1?sid=6badb8ca-f59a-4588-a966-c83185d18832)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
