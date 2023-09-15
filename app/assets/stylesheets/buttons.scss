@@ -25,31 +25,37 @@
 
 .btn-danger {
   @extend .btn;
+
   background: $text_color;
 }
 
 .btn-primary {
   @extend .btn;
+
   background: $primary;
 }
 
 .btn-primary-outline {
   @extend .btn-primary;
+
   border: 1px solid $white;
 }
 
 .btn-secondary {
   @extend .btn;
+
   background: $secondary;
 }
 
 .btn-secondary-outline {
   @extend .btn-secondary;
+
   border: 1px solid $white;
 }
 
 .btn-gray {
   @extend .btn;
+
   background: $background;
   color: $text_gray;
 }
