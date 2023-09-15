@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: restaurant_budget_production
-  username: restaurant_budget
+  database: jultpcft
+  username: jultpcft
   password: <%= ENV["RESTAURANT_BUDGET_DATABASE_PASSWORD"] %>
