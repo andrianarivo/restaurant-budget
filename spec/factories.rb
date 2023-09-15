@@ -1,10 +1,9 @@
 FactoryBot.define do
-
-  factory :user, aliases: [ :author ] do
-    name { "david" }
+  factory :user, aliases: [:author] do
+    name { 'david' }
     email { Faker::Internet.unique.email }
-    password { "password"}
-    password_confirmation { "password" }
+    password { 'password' }
+    password_confirmation { 'password' }
     confirmed_at { Date.today }
   end
 
@@ -33,5 +32,4 @@ FactoryBot.define do
 
     factory :expense_with_restaurant, traits: [:with_restaurant]
   end
-
 end

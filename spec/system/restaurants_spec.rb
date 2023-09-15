@@ -1,7 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Restaurants", type: :system do
-
+RSpec.describe 'Restaurants', type: :system do
   before(:all) { @restaurant = FactoryBot.create(:restaurant) }
   before(:each) { sign_in @restaurant.user }
 
@@ -15,7 +14,7 @@ RSpec.describe "Restaurants", type: :system do
 
     click_link 'New restaurant'
     fill_in 'restaurant[name]', with: Faker::Restaurant.name
-    attach_file 'restaurant[icon]', Rails.root + 'spec/fixtures/McDonalds-Logo.png'
+    attach_file 'restaurant[icon]', "#{Rails.root}spec/fixtures/McDonalds-Logo.png"
     click_button 'Create Restaurant'
 
     expect(page).to have_content('Restaurant was successfully created.')
