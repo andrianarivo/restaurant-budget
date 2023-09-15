@@ -1,0 +1,10 @@
+<%= render 'shared/nav', title: 'Editing restaurant', back: true %>
+
+<%= render "form", restaurant: @restaurant %>
+
+<br>
+
+<div>
+  <%= link_to "Show this restaurant", @restaurant %> |
+  <%= link_to "Back to restaurants", restaurants_path %>
+</div>

@@ -1,0 +1,11 @@
+@import "variables";
+
+.nav {
+  min-height: 3.5rem;
+  background-image: linear-gradient($nav_gradient_top, $nav_gradient_bottom);
+  color: $white;
+
+  h1 {
+    font-weight: normal;
+  }
+}
