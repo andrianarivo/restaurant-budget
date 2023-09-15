@@ -153,7 +153,7 @@ You can deploy this project using your own deployment service like `Render`.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/andrianarivo/restaurant-budget/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -170,6 +170,7 @@ If you like this project consider adding a ⭐️
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank Microverse.
+Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella). The design is used under the creative common license. No changes were made to the original design.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
