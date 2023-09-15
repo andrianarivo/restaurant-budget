@@ -1,11 +1,11 @@
 <nav class="nav d-flex justify-content-center align-items-center">
   <%= if back
-     link_to raw(image_tag image_url('back_arrow')), restaurants_path, class: 'ml-1'
+     link_to raw(image_tag image_url('back_arrow.svg')), restaurants_path, class: 'ml-1'
   end %>
 
   <h1 class="text-uppercase w-100 text-center <%= 'ml-3' if back %>"><%= title %></h1>
 
   <div class="d-flex justify-content-center align-items-center">
-    <%= link_to raw(image_tag image_url('power')), destroy_user_session_path, data: { turbo_method: :delete }, class: 'text-white mr-1 text-caption' if user_signed_in? %>
+    <%= link_to raw(image_tag image_url('power.svg')), destroy_user_session_path, data: { turbo_method: :delete }, class: 'text-white mr-1 text-caption' if user_signed_in? %>
   </div>
 </nav>

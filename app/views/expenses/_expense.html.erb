@@ -3,6 +3,6 @@
     <p class="text-bold"><%= expense.name %></p>
     <p>$<%= expense.amount %></p>
   </div>
-  <p class="d-flex align-items-center gap-1 mb-1"><%= image_tag image_url('calendar') %><%= expense.updated_at.strftime("%d %b %Y") %></p>
+  <p class="d-flex align-items-center gap-1 mb-1"><%= image_tag image_url('calendar.svg') %><%= expense.updated_at.strftime("%d %b %Y") %></p>
   <hr class="separator"/>
 </div>
