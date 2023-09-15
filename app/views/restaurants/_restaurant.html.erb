@@ -1,0 +1,24 @@
+<div id="<%= dom_id restaurant %>" class="card mx-2 mb-2 d-flex gap-1">
+
+  <%= image_tag url_for(restaurant.icon), width: 70, height: 70 %>
+
+  <div class="d-flex flex-column w-100 gap-1">
+    <div class="h-100 d-flex justify-content-between align-items-center">
+      <p class="text-bold text-gray-lighter">
+        <%= restaurant.name %>
+      </p>
+
+      <p class="text-bold">
+        $<%= restaurant.total_expense || 0.0 %>
+      </p>
+    </div>
+
+    <hr class="separator"/>
+
+    <p class="text-caption text-gray-lighter">
+      <%= restaurant.updated_at.strftime("%d %b %Y") %>
+    </p>
+  </div>
+
+
+</div>

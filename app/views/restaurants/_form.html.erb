@@ -1,0 +1,26 @@
+<%= form_with(model: restaurant, html: { multipart: true }, class: 'card mt-2 d-flex flex-column gap-1')  do |form| %>
+  <% if restaurant.errors.any? %>
+    <div style="color: red">
+      <h2 class="mb-1"><%= pluralize(restaurant.errors.count, "error") %> prohibited this restaurant from being saved:</h2>
+
+      <ul class="list-group">
+        <% restaurant.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.text_field :name, class: 'w-100 form-control', placeholder: 'Restaurant Name' %>
+  </div>
+
+  <hr class="separator" />
+
+  <div class="mb-2">
+    <%= form.label :icon, style: "display: block", class: 'mb-1' %>
+    <%= form.file_field :icon, accept: 'image/png,image/gif,image/jpeg', class: 'form-file' %>
+  </div>
+
+  <%= form.submit class: 'btn-primary w-100 p-2 text-bold' %>
+<% end %>

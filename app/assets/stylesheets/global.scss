@@ -1,0 +1,27 @@
+@import "variables";
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: font_url('Proxima_Nova_Font.otf');
+}
+
+@font-face {
+  font-family: "Lobster";
+  src: font_url('Lobster-Regular.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Proxima Nova', serif;
+  color: $text_color;
+  background-color: $background;
+}
+
+html,
+body {
+  min-height: 100%;
+}

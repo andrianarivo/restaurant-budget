@@ -1,0 +1,28 @@
+{
+  "name": "restaurant-budget",
+  "version": "1.0.0",
+  "description": "<a name=\"readme-top\"></a>",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "lint": "npx stylelint \"**/*.{css,scss}\" --fix; rubocop -A"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrianarivo/restaurant-budget.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrianarivo/restaurant-budget/issues"
+  },
+  "homepage": "https://github.com/andrianarivo/restaurant-budget#readme",
+  "devDependencies": {
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
+  }
+}
